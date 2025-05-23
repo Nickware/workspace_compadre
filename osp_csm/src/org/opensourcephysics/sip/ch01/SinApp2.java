@@ -21,13 +21,13 @@ import org.opensourcephysics.display.PlottingPanel;
 public class SinApp2 {
   public static void main(String[] args) {
     // create the plot
-    PlottingPanel plot = new PlottingPanel("Tiempo", "Amplitud", "Funcion sin");
+    PlottingPanel plot = new PlottingPanel("Tiempo", "Amplitud", "Funcion cos");
     DrawingFrame frame = new DrawingFrame(plot); // create frame
     Dataset dataset = new Dataset();             // create dataset
     plot.addDrawable(dataset); // add dataset to plot
     double t = 0, dt = 0.01; // initialize variables
     while(t<2) {                                // start loop
-      dataset.append(t, Math.sin(2*Math.PI*t)); // add point
+      dataset.append(t, Math.cos(2*Math.PI*t)); // add point
       t += dt;                                  // increment time
     }
     frame.setVisible(true); // show the frame
