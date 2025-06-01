@@ -83,7 +83,7 @@ public class ParticleBoxView extends AbstractAnimation {
         particle.initialize(x0, y0, vx0, vy0, 0); // Siempre inicia en t=0
         particle.restitution = restitution; // Asegura que el modelo tenga el valor del control
         particle.setRadius(radius); // Asegura que el modelo tenga el radio del control
-        particle.radius(radius);
+        // particle.radius(radius);
 
         // Actualiza el mensaje en el panel y limpia el gráfico
         drawing.setMessage("Time: 0.00");
