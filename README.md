@@ -1,20 +1,24 @@
-## Physics Pedagogy and Computer Science
+## Espacio de trabajo de Eclipse de Física de código abierto
 
-The continued use of procedural languages in education is due, in part, to the lack of up-to-date curricular materials that combine science topics with an object-oriented programming framework. Although there are many resources for teaching computational physics, few are object-oriented. What is needed by the broader science education community is not another computational physics, numerical analysis, or Java programming resource (although such resources are essential for discipline-specific practitioners), but a synthesis of curriculum development, computational physics, computer science, and physics education that will be useful for scientists and students wishing to write their own simulations and develop their own curricular material. The OSP code library and OSP examples meet this need. OSP code is described in the OSP User's Guide by Wolfgang Christian in An Introduction to Computer Simulation Methods by Harvey Gould, Jan Tobochnik, and Wolfgang Christian and in documentation in the OSP ComPADRE Collection.
-Physics Pedagogy and Computer Science
-OSP Library
+El uso continuo de lenguajes procedimentales en la educación se debe, en parte, a la falta de materiales curriculares actualizados que combinen temas científicos con un marco de programación orientada a objetos. Si bien existen numerosos recursos para la enseñanza de la física computacional, pocos están orientados a objetos. 
 
-    Scatter and line plots and histograms
-    Lattices, vector fields, scalar fields, complex fields, and contour plots
-    User-interface components for handling input and output
-    Drawing framework for easily performing custom visualizations
-    Ordinary differential equation (ODE) solvers
-    Three-dimensional drawing framework
-    Record simulations and save them as animated gifs and QuickTime movies
-    Save the state of a simulation in XML
+Lo que necesita la comunidad educativa científica en general no es otro recurso de física computacional, análisis numérico o programación Java (aunque estos recursos son esenciales para profesionales de cada disciplina), sino una síntesis del desarrollo curricular, la física computacional, la informática y la enseñanza de la física que sea útil para científicos y estudiantes que deseen escribir sus propias simulaciones y desarrollar su propio material curricular. La biblioteca de código OSP y los ejemplos de OSP satisfacen esta necesidad. 
 
-The OSP Library is distributed under the terms of the GNU General Public License.
+El código OSP se describe en la Guía del usuario de OSP de Wolfgang Christian, en Introducción a los métodos de simulación por computadora de Harvey Gould, Jan Tobochnik y Wolfgang Christian, y en la documentación de la Colección OSP ComPADRE. Pedagogía de la Física y Ciencias de la Computación
 
-Note: This is a copy note from: 
-Source: http://www.opensourcephysics.org/webdocs/programming.cfm?t=Overview
-License: GNU General Public License.
+### Biblioteca OSP
+
+- Gráficos de dispersión y líneas e histogramas
+- Retículas, campos vectoriales, campos escalares, campos complejos y gráficos de contorno
+- Componentes de interfaz de usuario para la gestión de entradas y salidas
+- Marco de dibujo para realizar fácilmente visualizaciones personalizadas
+- Solucionadores de ecuaciones diferenciales ordinarias (EDO)
+- Marco de dibujo tridimensional
+- Grabe simulaciones y guárdelas como GIF animados y películas QuickTime
+- Guarde el estado de una simulación en XML
+
+La Biblioteca OSP se distribuye bajo los términos de la Licencia Pública General de GNU.
+
+Nota: Esta es una nota de copia de:
+Fuente: http://www.opensourcephysics.org/webdocs/programming.cfm?t=Overview
+Licencia: Licencia Pública General de GNU.
