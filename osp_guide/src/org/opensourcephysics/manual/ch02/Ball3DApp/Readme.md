@@ -36,7 +36,7 @@ Interactúar con la simulación usando el mouse:
 - **Rotar:** arrastrar con el mouse.
 - **Zoom:** usar la rueda del mouse.
 
-Para detener la simulación anticipadamente, pulsa `Ctrl+C` en la consola.
+Para detener la simulación anticipadamente, pulsar `Ctrl+C` en la consola.
 
 ------
 
@@ -104,7 +104,7 @@ Una simulación física interactiva en 3D que muestra el movimiento y rebotes de
 # Instalar VPython
 pip install vpython
 
-# O si tienes problemas con la instalación:
+# O si tiene problemas con la instalación:
 pip install vpython --upgrade
 ```
 
@@ -219,10 +219,10 @@ simulacion_pelota_3d.py
 
 Esta simulación es ideal para:
 
-- **🏫 Enseñanza de física** (movimiento parabólico, energía)
-- **💻 Programación científica** con visualización 3D
-- **🎨 Diseño de visualizaciones** científicas atractivas
-- **📚 Demostraciones interactivas** en el aula
+- ** Enseñanza de física** (movimiento parabólico, energía)
+- ** Programación científica** con visualización 3D
+- ** Diseño de visualizaciones** científicas atractivas
+- ** Demostraciones interactivas** en el aula
 
 ## Contribuir
 
