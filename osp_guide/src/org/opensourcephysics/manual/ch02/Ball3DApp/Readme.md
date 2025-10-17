@@ -219,10 +219,10 @@ simulacion_pelota_3d.py
 
 Esta simulación es ideal para:
 
-- ** Enseñanza de física** (movimiento parabólico, energía)
-- ** Programación científica** con visualización 3D
-- ** Diseño de visualizaciones** científicas atractivas
-- ** Demostraciones interactivas** en el aula
+- **Enseñanza de física** (movimiento parabólico, energía)
+- **Programación científica** con visualización 3D
+- **Diseño de visualizaciones** científicas atractivas
+- **Demostraciones interactivas** en el aula
 
 ## Contribuir
 
