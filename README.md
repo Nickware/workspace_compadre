@@ -1,4 +1,4 @@
-## Espacio de trabajo de Eclipse de Física de código abierto
+## Espacio de trabajo de Eclipse de Opensource
 
 El uso continuo de lenguajes procedimentales en la educación se debe, en parte, a la falta de materiales curriculares actualizados que combinen temas científicos con un marco de programación orientada a objetos. Si bien existen numerosos recursos para la enseñanza de la física computacional, pocos están orientados a objetos. 
 
