@@ -17,6 +17,8 @@ import javax.swing.JFrame;
 
  * @author W. Christian
  * @version 1.0
+  * @author N. Torres
+ * @version 2.0
  */
 public class BallAndTableApp {
   public static void main(String[] args) {
@@ -62,3 +64,4 @@ public class BallAndTableApp {
  * Copyright (c) 2007  The Open Source Physics project
  *                     http://www.opensourcephysics.org
  */
+
