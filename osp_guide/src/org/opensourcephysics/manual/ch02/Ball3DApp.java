@@ -18,6 +18,8 @@ import java.awt.Color;
  *
  * @author W. Christian
  * @version 1.0
+ * @author N. Torres
+ * @version 2.0
  */
 public class Ball3DApp extends AbstractSimulation {
   EjsControl gui;
@@ -114,3 +116,4 @@ public class Ball3DApp extends AbstractSimulation {
  * Copyright (c) 2007  The Open Source Physics project
  *                     http://www.opensourcephysics.org
  */
+
