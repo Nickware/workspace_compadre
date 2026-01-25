@@ -11,7 +11,7 @@ package org.opensourcephysics.sip.ch02;
  * SHO models a simple harmonic oscillator.
  *
  * @author Wolfgang Christian, Jan Tobochnik, Harvey Gould
- * @version 1.0  05/07/05
+ * @version 2.0  24/01/26
  */
 public class SHO {
   double x, v, t;               // the dynamical variables
@@ -78,3 +78,4 @@ public class SHO {
  * Copyright (c) 2007  The Open Source Physics project
  *                     http://www.opensourcephysics.org
  */
+
