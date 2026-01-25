@@ -1,7 +1,7 @@
 /*
  * Open Source Physics software is free software as described near the bottom of this code file.
  *
- * For additional information and documentation on Open Source Physics please see:
+ * For additional information and documentation on Open Source Physics, please see:
  * <http://www.opensourcephysics.org/>
  */
 
@@ -11,7 +11,7 @@ package org.opensourcephysics.sip.ch02;
  * SHOParticle models a simple harmonic oscillator by subclassing the Particle class.
  *
  * @author Wolfgang Christian, Jan Tobochnik, Harvey Gould
- * @version 1.01  04/04/06
+ * @version 2.01  24/01/26
  */
 public class SHOParticle extends Particle {
   final static double k = 1.0;               // spring constant
@@ -86,3 +86,4 @@ public class SHOParticle extends Particle {
  * Copyright (c) 2007  The Open Source Physics project
  *                     http://www.opensourcephysics.org
  */
+
