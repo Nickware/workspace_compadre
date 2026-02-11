@@ -1,4 +1,4 @@
-# Simulación de Partícula en una Caja con OpenSource Physics (OSP)
+# Simulación de Partícula en una Caja con Open Source Physics
 
 ## Descripción
 Simulación basada en el framework **OpenSource Physics** que modela el movimiento de una partícula en una caja 2D con:
