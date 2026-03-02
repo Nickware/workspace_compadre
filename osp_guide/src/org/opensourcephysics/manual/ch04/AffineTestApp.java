@@ -1,7 +1,7 @@
 /*
  * Open Source Physics software is free software as described near the bottom of this code file.
  *
- * For additional information and documentation on Open Source Physics please see:
+ * For additional information and documentation on Open Source Physics, please see:
  * <http://www.opensourcephysics.org/>
  */
 
@@ -13,7 +13,7 @@ import org.opensourcephysics.display.*;
  * AffineTestApp demonstrates how to transform 2D shapes.
  *
  *  @author W. Christian
- *  @version 1.0
+ *  @version 2.0
  */
 public class AffineTestApp extends AbstractCalculation {
   PlottingPanel panel = new PlottingPanel(null, null, null);
@@ -75,8 +75,8 @@ public class AffineTestApp extends AbstractCalculation {
  * published by the Free Software Foundation; either version 2 of the License,
  * or(at your option) any later version.
 
- * Code that uses any portion of the code in the org.opensourcephysics package
- * or any subpackage (subdirectory) of this package must must also be be released
+ * Code that uses any portion of the code in the org. opensourcephysics package
+ * or any subpackage (subdirectory) of this package must also be released
  * under the GNU GPL license.
  *
  * This software is distributed in the hope that it will be useful,
@@ -95,3 +95,4 @@ public class AffineTestApp extends AbstractCalculation {
  * Copyright (c) 2007  The Open Source Physics project
  *                     http://www.opensourcephysics.org
  */
+
