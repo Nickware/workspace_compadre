@@ -31,8 +31,3 @@ Aunque este script es funcional, hay múltiples vías de mejora y personalizaci�
 - **Interactivo**: Habilitar zoom, desplazamiento o inspección de puntos en la gráfica de forma interactiva.
 - **Documentación**: Incluir más comentarios en el código y ejemplos de uso para facilitar su comprensión y extensión.
 - **Internacionalización**: Facilitar el cambio de idioma para las etiquetas y títulos desde parámetros externos o archivos de recursos.
-
-¡Siéntasen libres de adaptar, mejorar y compartir este sencillo punto de partida para visualización matemática en Java!
-
----
-**Contribuciones y mejoras son bienvenidas.** Si tienen correcciones o nuevas ideas, no duden en abrir una propuesta o enviar un comentario.
