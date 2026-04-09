@@ -2,8 +2,6 @@
 
 Paso a paso usando el stack tecnológico tendencia 2026
 
----
-
 ## Stack Tecnológico Moderno
 
 ```mermaid
@@ -26,8 +24,6 @@ quadrantChart
 | **pnpm** | 9.x | Package manager más rápido y eficiente |
 | **ESLint + Prettier** | Latest | Calidad de código automatizada |
 
----
-
 ## PASO 1: Prerrequisitos
 
 ```bash
@@ -38,8 +34,6 @@ git --version     # Para control de versiones
 ```
 
 > **Recomendación**: InstalaR [Node.js LTS](https://nodejs.org/) desde el sitio oficial.
-
----
 
 ## PASO 2: Inicializar Proyecto con Vite
 
@@ -67,8 +61,6 @@ flowchart TD
     D --> E[ node_modules + lock file]
     E --> F[Proyecto listo para codificar]
 ```
-
----
 
 ## PASO 3: Estructura de Directorios Final
 
@@ -98,11 +90,9 @@ constraints-simulation/
 mkdir -p src
 ```
 
----
-
 ## PASO 4: Crear Archivos del Núcleo
 
-### 📄 `src/types.ts`
+### `src/types.ts`
 
 ```typescript
 export type State = [number, number, number, number];
@@ -127,7 +117,7 @@ export interface ViewConfig {
 }
 ```
 
-### 📄 `src/physics.ts`
+### `src/physics.ts`
 
 ```typescript
 import { State, Rate, Parameters } from './types';
@@ -187,7 +177,7 @@ export function defaultParameters(): Parameters {
 }
 ```
 
-### 📄 `src/integrator.ts`
+### `src/integrator.ts`
 
 ```typescript
 import { State, Rate, Parameters } from './types';
@@ -230,7 +220,7 @@ export class RK4Integrator {
 }
 ```
 
-### 📄 `src/renderer.ts`
+### `src/renderer.ts`
 
 ```typescript
 import { State, ViewConfig } from './types';
@@ -320,7 +310,7 @@ export class SimulationRenderer {
 }
 ```
 
-### 📄 `src/controls.ts`
+### `src/controls.ts`
 
 ```typescript
 import { Parameters } from './types';
@@ -369,7 +359,7 @@ export class SimulationControls {
 }
 ```
 
-### 📄 `src/main.ts`
+### `src/main.ts`
 
 ```typescript
 import { State, Parameters, ViewConfig } from './types';
@@ -454,7 +444,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-### 📄 `src/style.css`
+### `src/style.css`
 
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
@@ -537,7 +527,7 @@ h1 {
 .buttons button:hover { transform: translateY(-1px); opacity: 0.9; }
 ```
 
-### 📄 `index.html`
+### `index.html`
 
 ```html
 <!DOCTYPE html>
@@ -545,16 +535,16 @@ h1 {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>⚛️ Simulación de Partículas con Restricción</title>
+  <title> Simulación de Partículas con Restricción</title>
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
 </head>
 <body>
   <div class="container">
-    <h1>⚛️ Dos Partículas con Restricción</h1>
+    <h1> Dos Partículas con Restricción</h1>
     <div class="main-content">
       <canvas id="sim-canvas" width="640" height="640"></canvas>
       <div class="controls-panel">
-        <h3>⚙️ Parámetros</h3>
+        <h3> Parámetros</h3>
         <label>dt: <input type="number" id="param-dt" step="0.001"></label>
         <label>g: <input type="number" id="param-g" step="0.1"></label>
         <label>k: <input type="number" id="param-k" step="10"></label>
@@ -573,11 +563,9 @@ h1 {
 </html>
 ```
 
----
-
 ## PASO 5: Configuración de Vite
 
-### 📄 `vite.config.ts`
+### `vite.config.ts`
 
 ```typescript
 import { defineConfig } from 'vite';
@@ -594,7 +582,7 @@ export default defineConfig({
 });
 ```
 
-### 📄 `tsconfig.json` (actualizar)
+### `tsconfig.json` (actualizar)
 
 ```json
 {
@@ -617,8 +605,6 @@ export default defineConfig({
   "include": ["src"]
 }
 ```
-
----
 
 ## PASO 6: Ejecutar el Proyecto
 
@@ -645,11 +631,9 @@ npm run build
 npm run preview
 ```
 
----
-
 ## PASO 7: Calidad de Código (Opcional pero Recomendado)
 
-### 📄 `.prettierrc`
+### `.prettierrc`
 
 ```json
 {
@@ -661,7 +645,7 @@ npm run preview
 }
 ```
 
-### 📄 `.eslintrc.cjs`
+### `.eslintrc.cjs`
 
 ```javascript
 module.exports = {
@@ -684,8 +668,6 @@ npm run lint
 npx prettier --write "src/**/*.{ts,js}"
 ```
 
----
-
 ## PASO 8: Deploy a Producción
 
 ```mermaid
@@ -701,7 +683,7 @@ flowchart TD
     F --> G
     
     G --> H[URL pública disponible]
-    H --> I[🌐 https://tu-proyecto.vercel.app]
+    H --> I[ https://tu-proyecto.vercel.app]
 ```
 
 ### Opción A: Vercel (Recomendado)
@@ -740,7 +722,7 @@ npm run deploy
 
 ---
 
-## 📊 Resumen de Comandos Clave
+## Resumen de Comandos Clave
 
 ```bash
 # ═══════════════════════════════════════════════════════════
@@ -758,7 +740,7 @@ npm run deploy
 
 ---
 
-## ✅ Checklist Final de Validación
+## Checklist Final de Validación
 
 ```markdown
 ## [ ] Proyecto inicializado con Vite
