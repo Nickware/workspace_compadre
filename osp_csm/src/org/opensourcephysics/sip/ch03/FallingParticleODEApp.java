@@ -14,6 +14,7 @@ import org.opensourcephysics.numerics.*;
  *
  * @author Wolfgang Christian, Jan Tobochnik, Harvey Gould
  * @version 1.0  05/16/05
+ * @version 2.0  05/01/26
  */
 public class FallingParticleODEApp extends AbstractCalculation {
 
