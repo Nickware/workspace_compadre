@@ -5,6 +5,20 @@
  * <http://www.opensourcephysics.org/>
  */
 
+
+* This program is a 3D demonstration of the use of 3D elements. It uses the
+ * Display3DFrame and the Element classes. The resolution of the cylinder and cone
+ * is set to a low value to show that they are really cylinders and cones and not
+ * prisms. The surface is defined by a 2D array of points.
+
+* Note that the code uses the Display3DFrame and Element classes from the
+ * org.opensourcephysics.display3d.simple3d package. To use a different implementation
+ * of these classes, change the import statement at the top of this file.
+ */
+//The code creates a Display3DFrame and adds several 3D elements to it: two cylinders, a sphere, a cone, and a surface. 
+//The surface is defined by a 2D array of points that are calculated using a mathematical function. 
+//The frame is then displayed on the screen.
+
 package org.opensourcephysics.sip.ch03;
 import org.opensourcephysics.display3d.simple3d.*; // Change this line to get a new implementation
 import org.opensourcephysics.frames.*;
