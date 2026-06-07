@@ -6,15 +6,30 @@
  */
 
 
-* This program is a 3D demonstration of the use of 3D elements. It uses the
- * Display3DFrame and the Element classes. The resolution of the cylinder and cone
- * is set to a low value to show that they are really cylinders and cones and not
- * prisms. The surface is defined by a 2D array of points.
-
-* Note that the code uses the Display3DFrame and Element classes from the
- * org.opensourcephysics.display3d.simple3d package. To use a different implementation
- * of these classes, change the import statement at the top of this file.
+/* This program is a 3D demonstration of various elements such as cylinders, spheres, cones, and surfaces.
+ * It uses the Open Source Physics library to create a 3D display frame and add these elements to it.
+ * The surface is defined by a mathematical function that creates a wave-like pattern.
+ *
+ * @author Francisco Esquembre
+ * @version 1.0  05/16/05
  */
+
+/* The main method initializes the 3D display frame, sets its properties, and adds various 3D elements to it.
+ * It then calculates the data for a surface element using a mathematical function and displays the frame.
+ */
+
+/* The code begins by importing the necessary classes from the Open Source Physics library. 
+ * /It then defines a class called Demo3D_1App with a main method that serves as the entry point for the application.
+ * In the main method, a Display3DFrame is created with the title "3D Demo 1". The frame's preferred minimum and maximum values for the x, y, and z axes are set to -1.0 and 1.0, respectively.
+ * The frame's decoration type is set to display axes, and the altitude and azimuth angles are set to 0.6 and 0.2, respectively.  
+ * Next, several 3D elements are created and added to the frame. These include two cylinders, a sphere, a cone, and a surface.
+ * The first cylinder is positioned at (0, 0, -0.4) with a size of (0.4, 0.4, 0.8) and a resolution of (5, 5, 2).
+ * The second cylinder is positioned at (0.8, -0.8, -0.4) with a size of (0.0, 0.0, 0.8) and a resolution of (5, 5, 2).
+ * The sphere is positioned at (-0.8, 0.8, 0) with a size of (0.4, 0.4, 0.4).
+ * The cone is positioned at (-0.8, -0.8, 0.0) with a size of (0.4, 0.4, 0.8), a resolution of (5, 5, 5), and a fill color of pink.
+ * The surface is positioned at (-1, -1, -1) with a fill color of red. The data for the surface is calculated using a nested loop that iterates through values of i and j to fill a 2D array with x, y, and z coordinates based on a mathematical function.
+ */ 
+
 //The code creates a Display3DFrame and adds several 3D elements to it: two cylinders, a sphere, a cone, and a surface. 
 //The surface is defined by a 2D array of points that are calculated using a mathematical function. 
 //The frame is then displayed on the screen.

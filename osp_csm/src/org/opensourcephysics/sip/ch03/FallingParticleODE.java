@@ -5,8 +5,17 @@
  * <http://www.opensourcephysics.org/>
  */
 
-package org.opensourcephysics.sip.ch03;
+package org.opensourcephysics.sip.ch03; 
 import org.opensourcephysics.numerics.*;
+
+/** 
+ * FallingParticleODE models a falling particle by implementing the ODE interface.
+ * The state array contains the position, velocity and time.  The rate array contains the
+ * rate of change of position, velocity and time.  The rate is computed using the given state, not the object's state.
+ * The getState and getRate methods are required to implement the ODE interface.
+ * The getState method returns the state array.  The getRate method computes the rate using the given state and stores the result in the given rate array.
+ * The constructor initializes the state array with the given initial position and velocity and sets the initial time to zero.
+ */
 
 /**
  * FallingParticleODE models a falling particle by implementing the ODE interface.
