@@ -14,6 +14,7 @@ Open Source Physics (OSP) es una iniciativa internacional dedicada a desarrollar
 - Promueve la enseñanza activa y el aprendizaje por descubrimiento, permitiendo a los estudiantes experimentar virtualmente con fenómenos difíciles, costosos o peligrosos de replicar en laboratorios reales [aulainteractiva.com](https://aulainteractiva.com.ve/simulaciones-de-fisica/).
 - Facilita la integración de la computación en la educación en ciencias, alineándose con tendencias internacionales en la formación científica [en.wikipedia](https://en.wikipedia.org/wiki/Open_Source_Physics).
 - Los recursos son personalizables, de libre acceso y cuentan con una comunidad internacional activa que comparte materiales y experiencias [en.wikipedia](https://en.wikipedia.org/wiki/Open_Source_Physics).
+- Igualmente con las tecnologías emergentes, Open Source Physics puede tener [oportunidades significativas](oportunity.md)  de mejora. 
 
 ## Reconocimientos
 
@@ -25,7 +26,7 @@ El proyecto OSP ha recibido premios internacionales, como el Science Prize for O
 - Análisis de videos de movimientos reales para comparar con modelos teóricos usando Tracker [aulainteractiva.com](https://aulainteractiva.com.ve/simulaciones-de-fisica/).
 - Creación de simulaciones personalizadas mediante EJS/EJSS para abordar temas específicos o experimentos virtuales [en.wikipedia](https://en.wikipedia.org/wiki/Open_Source_Physics).
 
-En resumen, Open Source Physics es un referente mundial en la creación y distribución de simulaciones y herramientas abiertas para la enseñanza de la física, facilitando el aprendizaje activo, la experimentación virtual y el acceso universal a recursos de calidad [en.wikipedia](https://en.wikipedia.org/wiki/Open_Source_Physics).
+Open Source Physics es un referente mundial en la creación y distribución de simulaciones y herramientas abiertas para la enseñanza de la física, facilitando el aprendizaje activo, la experimentación virtual y el acceso universal a recursos de calidad [en.wikipedia](https://en.wikipedia.org/wiki/Open_Source_Physics).
 
 ## Espacio de trabajo de Opensource
 
@@ -33,7 +34,7 @@ El uso continuo de lenguajes procedimentales en la educación se debe, en parte,
 
 Lo que necesita la comunidad educativa científica en general no es otro recurso de física computacional, análisis numérico o programación Java (aunque estos recursos son esenciales para profesionales de cada disciplina), sino una síntesis del desarrollo curricular, la física computacional, la informática y la enseñanza de la física que sea útil para científicos y estudiantes que deseen escribir sus propias simulaciones y desarrollar su propio material curricular. La biblioteca de código OSP y los ejemplos de OSP satisfacen esta necesidad. 
 
-El código OSP se describe en la Guía del usuario de OSP de Wolfgang Christian, en Introducción a los métodos de simulación por computadora de Harvey Gould, Jan Tobochnik y Wolfgang Christian, y en la documentación de la Colección OSP ComPADRE. Pedagogía de la Física y Ciencias de la Computación
+El código OSP se describe en la Guía del usuario de OSP de Wolfgang Christian, en Introducción a los métodos de simulación por computadora de Harvey Gould, Jan Tobochnik y Wolfgang Christian, y en la documentación de la Colección OSP ComPADRE. Pedagogía de la Física y Ciencias de la Computación.
 
 ### Biblioteca OSP
 
