@@ -55,7 +55,7 @@ El modelo open source permite innovación continua, pero OSP puede mejorar: [soa
 - **Multilenguaje automático**: Traducción con IA de recursos educativos a 100+ idiomas
 - **Accesibilidad para personas con discapacidad**: Control por voz, descripciones de audio para ciegas
 
-## Roadmap recomendado (2026-2027)
+## Roadmap recomendado 
 
 ```
 Fase 1 (6 meses): WebAssembly + WebGPU
