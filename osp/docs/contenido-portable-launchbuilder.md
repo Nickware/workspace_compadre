@@ -173,9 +173,9 @@ Usa el botón de vista previa del Builder para comprobar cómo queda la navegaci
 
 ## 5. Añadir programas o simulaciones
 
-Para que un nodo lance un programa Java, ese programa debe estar disponible en el classpath configurado para el nodo/conjunto y tener una clase principal compatible con el Launcher. En el Builder, configura el JAR o classpath y selecciona la clase ejecutable para el nodo. Si usa argumentos o archivos de entrada, añádelos también como recursos del conjunto y configura sus rutas relativas.
+Para crear un programa ejecutable, compilarlo como JAR y conectarlo a un nodo del Launcher, sigue la guía [Construir una simulación masa-resorte y empaquetarla como JAR](simulacion-masa-resorte-jar.md). Allí se construye `resorte-app.jar`, se configura como classpath del nodo y se selecciona `demo.ResorteMasa` como clase principal.
 
-No supongas que un JAR de simulación separado queda embebido automáticamente: la implementación actual de **Create Jar** preselecciona el JAR del Launcher y los archivos/carpetas no comprimidos de la carpeta base, pero excluye los archivos `.jar` y `.zip` secundarios de esa selección automática. Comprueba el diálogo de inclusión y la configuración de classpath del programa. Si la simulación depende de un JAR externo, resuelve explícitamente cómo distribuir esa dependencia y pruébala en una instalación limpia.
+El JAR de simulación no se preselecciona automáticamente en **Create Jar**: selecciónalo explícitamente en el árbol del diálogo. OSP `JarTool` desempaqueta los JAR fuente seleccionados y mezcla sus archivos en el Launcher JAR final. Al ejecutarse el paquete, el propio JAR del Launcher se añade al classpath; por eso las clases de la simulación incluidas en el paquete quedan disponibles sin distribuir un JAR anidado. Si la aplicación depende de otros JAR, inclúyelos también y prueba el resultado en una instalación limpia.
 
 ## 6. Guardar el conjunto
 
@@ -191,7 +191,7 @@ El `.xset` guarda la organización de pestañas y nodos; por sí solo no garanti
 ## 7. Crear el JAR portable
 
 1. Selecciona la acción **Create Jar** en LaunchBuilder.
-2. En el diálogo, incluye `osp.jar` y todos los recursos necesarios: `.xset`, XML de nodos, HTML, imágenes, hojas de estilo, datos y carpetas que los contienen.
+2. En el diálogo, incluye `osp.jar`, el JAR de la simulación (selección explícita) y todos los recursos necesarios: `.xset`, XML de nodos, HTML, imágenes, hojas de estilo, datos y carpetas que los contienen.
 3. Revisa la selección antes de aceptarla; no incluyas archivos temporales ni materiales innecesarios.
 4. Confirma la creación.
 
@@ -202,7 +202,7 @@ osp/ant/build/jar/mi_contenido.jar
 ```
 
 LaunchBuilder genera el manifiesto del paquete para iniciar `org.opensourcephysics.tools.Launcher`.
-El paquete debe contener `mi_contenido.xset` en su raíz; selecciona también la carpeta `recursos/` y cualquier otro archivo o carpeta referenciado por los nodos o las páginas HTML.
+El paquete debe contener `mi_contenido.xset` en su raíz; selecciona también la carpeta `recursos/` y cualquier otro archivo o carpeta referenciado por los nodos o las páginas HTML. Los JAR de simulación seleccionados se desempaquetan dentro del JAR final.
 
 ## 8. Probar la portabilidad
 

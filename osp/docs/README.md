@@ -10,6 +10,7 @@ Esta carpeta reúne la documentación del núcleo de Open Source Physics.
 - [Cómo construir una simulación](como-construir-simulacion.md): guía práctica para crear una simulación OSP desde cero.
 - [Ejemplo integrador](ejemplo-integrador.md): muestra cómo interactúan las carpetas del proyecto en una simulación realista.
 - [Contenido portable con LaunchBuilder](contenido-portable-launchbuilder.md): paso a paso para crear un conjunto `.xset` con páginas HTML y recursos, empaquetarlo como JAR y probarlo fuera del entorno de desarrollo.
+- [Simulación masa-resorte como JAR](simulacion-masa-resorte-jar.md): implementa el modelo con RK4, lo compila como JAR y lo integra en un paquete de LaunchBuilder.
 
 ## ¿Qué cubre esta documentación?
 
