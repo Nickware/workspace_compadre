@@ -1,6 +1,6 @@
 # Construir una simulación masa-resorte y empaquetarla como JAR
 
-Esta guía crea una simulación OSP desde cero, construye un JAR ejecutable para ella y lo incorpora a un contenido portable creado con LaunchBuilder. La clase implementa la ecuación del oscilador armónico y usa el integrador RK4 de OSP.
+Esta guía crea la simulación Java desde cero, construye su JAR y lo añade a un paquete HTML existente de LaunchBuilder. Para preparar OSP y crear el contenido HTML inicial, sigue primero [Crear contenido portable con OSP LaunchBuilder](contenido-portable-launchbuilder.md). Aquí se cubren la implementación, la compilación del programa y los pasos adicionales para integrarlo.
 
 ## Resultado esperado
 
@@ -10,25 +10,20 @@ Al terminar tendrás:
 osp/ant/build/jar/
 ├── osp.jar
 ├── resorte-app.jar
-├── resorte-portable.xset
-├── resorte-portable.jar
-└── resorte-contenido/
-    └── introduccion.html
+├── guia_resorte.xset
+├── guia_resorte.jar
+└── guia_resorte/
+  ├── introduccion.html
+  └── modelo.html
 ```
 
 - `osp.jar`: biblioteca y herramientas OSP, incluida LaunchBuilder.
 - `resorte-app.jar`: la simulación compilada, aún dependiente de `osp.jar` para ejecutarse por separado.
-- `resorte-portable.jar`: Launcher final con OSP, la simulación y el contenido seleccionado.
+- `guia_resorte.jar`: el paquete portable anterior, actualizado para incluir también la simulación.
 
-## 1. Preparar OSP
+## 1. Reutilizar el paquete HTML
 
-Requisitos: JDK, Apache Ant y este repositorio. Desde la raíz de `osp`, construye la biblioteca:
-
-```bash
-ant -f ant/build_core.xml all
-```
-
-El JAR de OSP queda en `ant/build/jar/osp.jar`. El build heredado configura `source="1.5"`; si el JDK instalado ya no acepta ese nivel, ajusta la configuración de Ant a un nivel compatible antes de compilar.
+Completa los pasos de preparación y creación HTML de la [guía de contenido portable](contenido-portable-launchbuilder.md). Para continuar con este ejemplo, deben existir `ant/build/jar/osp.jar`, `guia_resorte.xset` y la carpeta `guia_resorte/` con sus dos páginas. Esa guía cubre los requisitos JDK/Ant y cómo crear el `.xset` inicial.
 
 ## 2. Crear el archivo fuente
 
@@ -159,92 +154,61 @@ java -cp "ant/build/jar/resorte-app.jar:ant/build/jar/osp.jar" demo.ResorteMasa
 
 En Windows, reemplaza `:` por `;` en el classpath. Verifica que aparece el control OSP, que **Initialize** toma los valores y que **Start** dibuja la evolución. No uses `java -jar resorte-app.jar` en esta fase: el manifiesto generado no incluye OSP como dependencia.
 
-## 4. Preparar el contenido HTML para LaunchBuilder
+## 4. Añadir la simulación al conjunto existente
 
-Crea una página de introducción que acompañe el modelo:
-
-```bash
-mkdir -p ant/build/jar/resorte-contenido
-```
-
-Guarda lo siguiente como `ant/build/jar/resorte-contenido/introduccion.html`:
-
-```html
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Sistema masa-resorte</title>
-</head>
-<body>
-  <h1>Sistema masa-resorte</h1>
-  <p>Un resorte ideal ejerce una fuerza restauradora F = -k x.</p>
-  <p>En el modelo, x es el desplazamiento, m la masa y k la constante elástica.</p>
-  <p>Abre el nodo Simulación para cambiar las condiciones iniciales y observar x(t).</p>
-</body>
-</html>
-```
-
-## 5. Registrar la simulación en LaunchBuilder
-
-Ejecuta LaunchBuilder desde su carpeta base para que encuentre los archivos y JAR por rutas relativas:
+Abre el conjunto `guia_resorte.xset` que creaste en la guía portable. Si LaunchBuilder no está abierto, ejecútalo desde su carpeta base:
 
 ```bash
 cd ant/build/jar
 java -jar osp.jar
 ```
 
-En el Builder:
+En LaunchBuilder:
 
-1. Crea un conjunto nuevo y guárdalo como `resorte-portable.xset` en `ant/build/jar`, junto a `osp.jar`.
-2. Crea una pestaña llamada **Masa-resorte**.
-3. Asocia `resorte-contenido/introduccion.html` a un nodo llamado **Introducción** usando el selector de contenido **Open HTML**.
-4. Crea un nodo llamado **Simulación**.
-5. En el campo de classpath/JAR del nodo, selecciona `resorte-app.jar`.
-6. Usa el selector de clases para buscar y asignar `demo.ResorteMasa` como clase lanzable.
-7. Guarda con **Save All** y prueba el nodo desde la vista previa.
+1. Conserva la pestaña **Oscilaciones** y sus nodos HTML.
+2. Añade un nodo llamado **Simulación**.
+3. En el classpath/JAR del nodo, selecciona `resorte-app.jar`.
+4. Usa el selector de clases para asignar `demo.ResorteMasa` como clase lanzable.
+5. Guarda con **Save All** y verifica el nodo desde la vista previa.
 
 Al ejecutarse desde el Launcher, la clase principal llama a `SimulationControl.createApp(...)`, así que aparecen los controles **Initialize**, **Start**, **Step** y **Reset**.
 
-## 6. Incorporar el JAR de simulación al paquete portable
+## 5. Actualizar y probar el JAR portable
 
-1. Elige **Create Jar** en LaunchBuilder.
-2. Incluye `osp.jar`, `resorte-portable.xset`, los XML de los nodos y la carpeta `resorte-contenido/`.
-3. El empaquetador no preselecciona JAR secundarios. En el árbol del diálogo, selecciona explícitamente `resorte-app.jar` como JAR completo.
-4. Confirma la creación con el nombre `resorte-portable.jar`.
+Sigue el procedimiento **Create Jar** de la [guía portable](contenido-portable-launchbuilder.md), con estas diferencias para el ejemplo:
 
-OSP `JarTool` desempaqueta los JAR fuente seleccionados y mezcla sus entradas en el JAR de salida. Por tanto, las clases de `resorte-app.jar` quedan dentro de `resorte-portable.jar`; no queda como un JAR anidado. El Launcher también incorpora su propio JAR al classpath al ejecutar la clase, de modo que el bytecode de la simulación y las clases OSP están disponibles en el paquete final.
+- selecciona explícitamente `resorte-app.jar` en el árbol de archivos; los JAR secundarios no se preseleccionan
+- conserva `guia_resorte.xset` y la carpeta `guia_resorte/`
+- genera de nuevo `guia_resorte.jar`, reemplazando el paquete anterior si hace falta
 
-El `.xset` debe quedar en la raíz del JAR final y compartir nombre base con el paquete: `resorte-portable.xset` dentro de `resorte-portable.jar`.
+El empaquetador desempaqueta `resorte-app.jar` y mezcla sus clases en `guia_resorte.jar`; no lo deja como un JAR anidado. El Launcher incluye su propio JAR en el classpath, así que las clases de la simulación quedan disponibles al ejecutarla.
 
-## 7. Probar el circuito completo
-
-Prueba primero en la carpeta de build:
+Prueba el paquete resultante fuera de la carpeta de build:
 
 ```bash
-java -jar ant/build/jar/resorte-portable.jar
+java -jar ant/build/jar/guia_resorte.jar
 ```
 
-Luego copia únicamente `resorte-portable.jar` a otra carpeta y vuelve a ejecutarlo. Comprueba que:
+Comprueba que:
 
-- abre automáticamente `resorte-portable.xset`
+- abre automáticamente `guia_resorte.xset`
 - se muestra la página HTML
 - el nodo **Simulación** abre los controles OSP
 - al inicializar e iniciar, aparece la curva del desplazamiento
 
-Si falla, revisa que el nodo tenga `demo.ResorteMasa`, que `resorte-app.jar` se seleccionó entero en **Create Jar**, que el `.xset` esté en la raíz y que las rutas HTML sean relativas.
+Para probar portabilidad, copia únicamente `guia_resorte.jar` a otra carpeta y repite la prueba. Si falla, revisa el classpath del nodo, la inclusión de `resorte-app.jar` y que las rutas HTML sean relativas.
 
 ## Flujo completo
 
 ```text
 src/demo/ResorteMasa.java
-        ↓ javac -cp osp.jar
+  ↓ javac -cp osp.jar
 ant/build/jar/resorte-app.jar
-        ↓ LaunchBuilder: classpath + clase principal
-resorte-portable.xset + HTML + recursos
-        ↓ Create Jar (OSP JarTool desempaqueta resorte-app.jar)
-ant/build/jar/resorte-portable.jar
-        ↓ java -jar
+  ↓ añadir al conjunto HTML existente
+guia_resorte.xset + páginas HTML + nodo de simulación
+  ↓ Create Jar (OSP JarTool desempaqueta resorte-app.jar)
+ant/build/jar/guia_resorte.jar
+  ↓ java -jar
 OSP Launcher + guía HTML + simulación
 ```
 
