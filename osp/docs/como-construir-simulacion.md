@@ -84,7 +84,7 @@ Las variables de estado deben reflejar las magnitudes dinámicas del sistema:
 - concentración
 - etc.
 
-Un modelo bien hecho evita mezclar la física con la interfaz gráfica. La lógica del sistema y la representación visual deben estar separadas.
+Un modelo óptimo evita mezclar la física con la interfaz gráfica. La lógica del sistema y la representación visual deben estar separadas.
 
 ---
 
@@ -111,7 +111,7 @@ La idea práctica es:
 
 La mayor parte del cálculo del sistema se hace con un solver de ecuaciones diferenciales.
 
-Dependiendo del problema puedes usar:
+Dependiendo del problema se puede usar:
 
 - `Euler`
 - `RK4`
@@ -205,12 +205,12 @@ Esto es importante porque permite:
 
 Para construir simulaciones legibles y mantenibles en OSP:
 
-- separa física y visualización
-- usa nombres claros para variables de estado
-- define métodos pequeños para cada responsabilidad
-- no mezcles control de UI con la ecuación del sistema
+- separar física y visualización
+- usar nombres claros para variables de estado
+- definir métodos pequeños para cada responsabilidad
+- no mezclar control de UI con la ecuación del sistema
 - usa un solver adecuado para la precisión requerida
-- documenta los parámetros físicos que se exponen al usuario
+- documentar los parámetros físicos que se exponen al usuario
 
 ---
 
@@ -226,7 +226,7 @@ En este repositorio, el código fuente principal vive en:
 osp/src/
 ```
 
-Si vas a agregar tu clase nueva, debe quedar dentro del árbol `src` en una ruta coherente con el paquete.
+Si va a agregar tu clase nueva, debe quedar dentro del árbol `src` en una ruta coherente con el paquete.
 
 Por ejemplo:
 
@@ -238,7 +238,7 @@ o bien otra estructura equivalente, siempre con el mismo nombre de paquete que e
 
 ### 11.2 Regla clave: nombre de archivo = nombre de clase
 
-Si defines esta clase:
+Si define esta clase:
 
 ```java
 package org.opensourcephysics.demo;
@@ -268,7 +268,7 @@ El proyecto usa Ant. La configuración de build está en:
 osp/ant/build_core.xml
 ```
 
-Desde la carpeta raíz del proyecto OSP, puedes ejecutar:
+Desde la carpeta raíz del proyecto OSP, puede ejecutar:
 
 ```bash
 ant -f ant/build_core.xml compile
@@ -302,7 +302,7 @@ osp/build/jar/osp.jar
 
 ### 11.5 Verificar el resultado
 
-Después de ejecutar la tarea de compilación, revisa si existe el artefacto:
+Después de ejecutar la tarea de compilación, revisar si existe el artefacto:
 
 ```text
 osp/build/jar/osp.jar
@@ -329,4 +329,4 @@ Un proyecto típico de simulación en OSP sigue este flujo:
 10. Guardar o restaurar estado si hace falta
 ```
 
-Con esto ya puedes construir, compilar y empaquetar una simulación funcional, visual y reutilizable sobre la base de OSP.
+Con esto ya puede construir, compilar y empaquetar una simulación funcional, visual y reutilizable sobre la base de OSP.
