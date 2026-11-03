@@ -164,8 +164,10 @@ La salida compilada se genera normalmente en una carpeta `build/`.
 La documentación del núcleo OSP está organizada en la carpeta `docs`:
 
 - [docs/README.md](docs/README.md): índice de documentación
+- [docs/carpeta-raiz-osp.md](docs/carpeta-raiz-osp.md): explicación de las carpetas principales del proyecto (`ant`, `src`, `bin`, `docs`, `org`)
 - [docs/paquetes-osp.md](docs/paquetes-osp.md): mapa exacto de paquetes y responsabilidades
 - [docs/flujo-simulacion.md](docs/flujo-simulacion.md): flujo de ejecución desde el arranque hasta el paso de integración
+- [docs/como-construir-simulacion.md](docs/como-construir-simulacion.md): guía práctica para crear una simulación OSP desde cero
 
 ---
 
