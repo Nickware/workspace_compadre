@@ -159,6 +159,16 @@ La salida compilada se genera normalmente en una carpeta `build/`.
 
 ---
 
+## Documentación técnica
+
+La documentación del núcleo OSP está organizada en la carpeta `docs`:
+
+- [docs/README.md](docs/README.md): índice de documentación
+- [docs/paquetes-osp.md](docs/paquetes-osp.md): mapa exacto de paquetes y responsabilidades
+- [docs/flujo-simulacion.md](docs/flujo-simulacion.md): flujo de ejecución desde el arranque hasta el paso de integración
+
+---
+
 ## Ejemplos y demos
 
 Además del código base, la carpeta `src/demo` incluye ejemplos pequeños para explorar cómo se usa la librería en práctica. Estos demos sirven como referencia para enfermar los conceptos de simulación y librerías gráficas.
