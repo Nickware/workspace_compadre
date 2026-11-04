@@ -6,6 +6,7 @@ Esta carpeta reúne la documentación del núcleo de Open Source Physics.
 
 - [Mapa exacto de paquetes](paquetes-osp.md): descripción detallada de cada subcarpeta del paquete `org.opensourcephysics`.
 - [Flujo de una simulación](flujo-simulacion.md): explicación del ciclo de ejecución desde el arranque hasta el paso de integración numérica.
+- [Cómo construir una simulación](como-construir-simulacion.md): guía práctica para crear una simulación OSP desde cero.
 
 ## ¿Qué cubre esta documentación?
 
