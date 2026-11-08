@@ -1,4 +1,4 @@
-package org.opensourcephysics.demo;
+package demo;
 
 import javax.swing.JFrame;
 import org.opensourcephysics.controls.AbstractSimulation;
@@ -28,8 +28,7 @@ public class OsciladorSimple extends AbstractSimulation {
     time = 0.0;
 
     frame.clearData();
-    frame.setXRange(0, 20);
-    frame.setYRange(-2, 2);
+    frame.setPreferredMinMax(0, 20, -2, 2);
     frame.append(0, time, x);
   }
 
