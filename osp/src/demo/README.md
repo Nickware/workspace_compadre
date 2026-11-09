@@ -45,7 +45,7 @@ ant -f ant/build_core.xml compile
 
 Esto compila todo el código fuente del proyecto y deja las clases generadas en la salida de compilación del build.
 
-Si solo quieres compilar los ejemplos manualmente, puedes usar `javac` con el classpath adecuado, aunque el flujo recomendado del repositorio es usar Ant.
+Solo si desea compilar los ejemplos manualmente, puede usar `javac` con el classpath adecuado, aunque el flujo recomendado del repositorio es usar Ant.
 
 ---
 
@@ -174,5 +174,3 @@ La carpeta `demo` es el espacio de pruebas y aprendizaje del proyecto OSP. Aquí
 - visualizar resultados en tiempo real
 - aprender a compilar y ejecutar proyectos Java desde la línea de comandos o desde VS Code
 - construir simulaciones progresivas desde ejemplos simples hasta modelos más complejos
-
-Si quieres, el siguiente paso podría ser dejar un ejemplo adicional en esta carpeta con una simulación de tipo `Movimiento rectilíneo` o `Sistema masa-resorte` completamente documentado paso a paso.

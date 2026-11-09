@@ -155,14 +155,14 @@ Esto ayuda a que el proyecto se entienda sin necesidad de inspecionar todo el c�
 
 Responsabilidad: presentación general del proyecto.
 
-Este archivo sirve como punto de entrada humano para entender:
+Este archivo sirve como punto de entrada para entender:
 
 - qué es OSP
 - para qué sirve
 - cómo está organizado
 - qué documentación complementaria existe
 
-Es la primera capa de documentación para cualquier persona que entra al repositorio.
+Es la primera capa de documentación para cualquier usuario que entra al repositorio.
 
 ---
 
