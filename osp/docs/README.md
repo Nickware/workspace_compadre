@@ -9,6 +9,7 @@ Esta carpeta reúne la documentación del núcleo de Open Source Physics.
 - [Flujo de una simulación](flujo-simulacion.md): explicación del ciclo de ejecución desde el arranque hasta el paso de integración numérica.
 - [Cómo construir una simulación](como-construir-simulacion.md): guía práctica para crear una simulación OSP desde cero.
 - [Ejemplo integrador](ejemplo-integrador.md): muestra cómo interactúan las carpetas del proyecto en una simulación realista.
+- [Contenido portable con LaunchBuilder](contenido-portable-launchbuilder.md): paso a paso para crear un conjunto `.xset` con páginas HTML y recursos, empaquetarlo como JAR y probarlo fuera del entorno de desarrollo.
 
 ## ¿Qué cubre esta documentación?
 

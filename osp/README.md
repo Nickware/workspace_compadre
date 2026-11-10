@@ -168,6 +168,7 @@ La documentación del núcleo OSP está organizada en la carpeta `docs`:
 - [docs/paquetes-osp.md](docs/paquetes-osp.md): mapa exacto de paquetes y responsabilidades
 - [docs/flujo-simulacion.md](docs/flujo-simulacion.md): flujo de ejecución desde el arranque hasta el paso de integración
 - [docs/como-construir-simulacion.md](docs/como-construir-simulacion.md): guía práctica para crear una simulación OSP desde cero
+- [docs/contenido-portable-launchbuilder.md](docs/contenido-portable-launchbuilder.md): creación y empaquetado portable de contenido HTML con OSP LaunchBuilder/Launcher
 
 ---
 
