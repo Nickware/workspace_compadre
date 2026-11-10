@@ -12,7 +12,7 @@ Este ejemplo muestra cómo interactúan todas las carpetas principales del proye
 
 ## 1. Escenario
 
-Queremos modelar un oscilador armónico simple con:
+Se quiere  modelar un oscilador armónico simple con:
 
 - posición `x`
 - velocidad `v`
